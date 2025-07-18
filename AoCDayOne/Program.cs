@@ -14,19 +14,22 @@ namespace AoCDayOne
             String line;
             try
             {
-                //Pass the file path and file name to the StreamReader constructor
                 StreamReader sr = new StreamReader(@"C:\\MaxwellBilango\\CSharpCode\\AoCDayOne\\inputlist.txt");
-                //Read the first line of text
                 line = sr.ReadLine();
-                //Continue to read until you reach end of file
+
+                List<string> lines = new List<string>();
+
                 while (line != null)
                 {
-                    //write the line to console window
-                    Console.WriteLine(line);
-                    //Read the next line
+                    lines.Add(line);
                     line = sr.ReadLine();
                 }
-                //close the file
+
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    Console.WriteLine(lines[i]);
+                }
+
                 sr.Close();
                 Console.ReadLine();
             }
