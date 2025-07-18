@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace AoCDayOne
 {
     internal class Program
@@ -12,6 +11,8 @@ namespace AoCDayOne
         static void Main(string[] args)
         {
             String line;
+            int total;
+            int finaltotal=0;
             try
             {
                 StreamReader sr = new StreamReader(@"C:\\MaxwellBilango\\CSharpCode\\AoCDayOne\\inputlist.txt");
@@ -33,10 +34,18 @@ namespace AoCDayOne
                     line = sr.ReadLine();
                 }
 
+                linesleft.Sort();
+                linesright.Sort();
+
                 for (int i = 0; i < lines.Count; i++)
                 {
-                    Console.WriteLine(linesleft[i] + linesright[i]);
+                    int left = Int32.Parse(linesleft[i]);
+                    int right = Int32.Parse(linesright[i]);
+                    total = left - right;
+                    int absolutetotal = Math.Abs(total);
+                    finaltotal = finaltotal + absolutetotal;
                 }
+                Console.WriteLine(finaltotal);
 
                 sr.Close();
                 Console.ReadLine();
