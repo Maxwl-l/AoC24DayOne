@@ -1,0 +1,7 @@
+C:\MaxwellBilango\CSharpCode\AoCDayOne\bin\Debug\AoCDayOne.exe.config
+C:\MaxwellBilango\CSharpCode\AoCDayOne\bin\Debug\AoCDayOne.exe
+C:\MaxwellBilango\CSharpCode\AoCDayOne\bin\Debug\AoCDayOne.pdb
+C:\MaxwellBilango\CSharpCode\AoCDayOne\obj\Debug\AoCDayOne.csproj.AssemblyReference.cache
+C:\MaxwellBilango\CSharpCode\AoCDayOne\obj\Debug\AoCDayOne.csproj.CoreCompileInputs.cache
+C:\MaxwellBilango\CSharpCode\AoCDayOne\obj\Debug\AoCDayOne.exe
+C:\MaxwellBilango\CSharpCode\AoCDayOne\obj\Debug\AoCDayOne.pdb
