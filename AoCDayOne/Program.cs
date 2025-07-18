@@ -15,37 +15,35 @@ namespace AoCDayOne
             int finaltotal=0;
             try
             {
-                StreamReader sr = new StreamReader(@"C:\\MaxwellBilango\\CSharpCode\\AoCDayOne\\inputlist.txt");
+                StreamReader sr = new StreamReader(@"C:\\MaxwellBilango\\CSharpCode\\AoCDayOne\\inputlist.txt"); //Reading text file
                 line = sr.ReadLine();
 
-                List<string> lines = new List<string>();
                 List<string> linesleft = new List<string>();
                 List<string> linesright = new List<string>();
 
                 while (line != null)
                 {
-                    string left = line.Substring(0, 5);
+                    string left = line.Substring(0, 5); //Splitting each number from one line into a seperate list
                     linesleft.Add(left);
                     string right = line.Substring(8);
                     linesright.Add(right);
 
-                    lines.Add(line);
 
-                    line = sr.ReadLine();
+                    line = sr.ReadLine(); //Read next line
                 }
 
-                linesleft.Sort();
+                linesleft.Sort(); //Sorts each list into lowest to highest
                 linesright.Sort();
 
-                for (int i = 0; i < lines.Count; i++)
+                for (int i = 0; i < linesleft.Count; i++)
                 {
-                    int left = Int32.Parse(linesleft[i]);
+                    int left = Int32.Parse(linesleft[i]); //Converts each number in both lists to an integer
                     int right = Int32.Parse(linesright[i]);
                     total = left - right;
-                    int absolutetotal = Math.Abs(total);
+                    int absolutetotal = Math.Abs(total); //Removes any negative totals
                     finaltotal = finaltotal + absolutetotal;
                 }
-                Console.WriteLine(finaltotal);
+                Console.WriteLine(finaltotal); //Calculates final total
 
                 sr.Close();
                 Console.ReadLine();
